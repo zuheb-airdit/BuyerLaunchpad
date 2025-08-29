@@ -1,0 +1,94 @@
+<mvc:View
+    controllerName="aisplaunpad007.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+    xmlns:l="sap.ui.layout"
+>
+
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <OverflowToolbarButton
+                    id="sideNavigationToggleButton"
+                    icon="sap-icon://menu2"
+                    type="Transparent"
+                    press="onSideNavButtonPress"
+                    tooltip="Toggle Navigation"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </OverflowToolbarButton>
+                <Image
+                    src="./Images/logo.png"
+                    press="onNavtoHome"
+                    width="7rem"
+                    height="2rem"
+                    class="sapUiTinyMarginEnd"
+                />
+              
+                <ToolbarSpacer />
+                  <Title
+                    text="Airdit Intelligence Supplier Portal"
+                    titleStyle="H6"
+                    textAlign="Begin"
+                    class="mainTitle"
+                />
+                <SearchField
+                    id="searchField"
+                    placeholder="Search..."
+                    width="15rem"
+                    search="onSearch"
+                    class="sapUiTinyMarginEnd"
+                />
+                <Button
+                    id="copilotButton"
+                    icon="sap-icon://action-settings"
+                    type="Transparent"
+                    press="onCopilotPress"
+                    tooltip="Settings"
+                    class="sapUiTinyMarginEnd"
+                />
+                  <Button
+                    id="navBtn"
+                    icon="sap-icon://bell"
+                    type="Transparent"
+                    press="onNotificationPress"
+                    tooltip="Settings"
+                    class="sapUiTinyMarginEnd"
+                />
+                <Avatar
+                    id="profileAvatar"
+                    src="./Images/profile.png"
+                    displayShape="Circle"
+                    displaySize="XS"
+                    initials="A"
+                    press="onProfilePress"
+                    tooltip="User Profile"
+                />
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation
+                id="sideNavigationg"
+                expanded="{= ${device>/system/phone} === true ? false : true}"
+                itemSelect="onItemSelect"
+            >
+                <tnt:NavigationList
+                    id="sideNavigation"
+                    expanded="{= ${device>/system/phone} === true ? false : true}"
+                    itemSelect="onItemSelect"
+                />
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer
+                id="pageContainer"
+                navigationFinished="onPageNavigationFinished"
+                class="sapUiNoScrollbar"
+            />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

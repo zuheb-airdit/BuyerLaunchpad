@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>AISP Launchpad</title>
+    <style>
+        html,
+        body,
+        body>div,
+        #container,
+        #container-uiarea {
+            height: 100%;
+        }
+    </style>
+    <script>
+        globalThis["sap-ui-config"] = {
+            "frame-options": "allow",
+            "frame-options-config": {
+                "allowlist": [
+                    "https://agpcgpdevqa.blob.core.windows.com",
+                    "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/","*"
+                ],
+                callback: function (bSuccess) {
+                    if (bSuccess) {
+                        console.log("App is allowed to run!");
+                    } else {
+                        console.log("App is not allowed to run!");
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{
+            "aisplaunpad007": "./"
+        }' data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true" data-sap-ui-frameOptions="allow"></script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div data-sap-ui-component data-name="aisplaunpad007" data-id="container" data-settings='{"id" : "aisplaunpad007"}'
+        data-handle-validation="true"></div>
+</body>
+
+</html>

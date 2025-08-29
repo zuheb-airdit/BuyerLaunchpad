@@ -1,0 +1,7 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <VBox visible="{= !${applicationList>/} || ${applicationList>/}.length === 0}">
+        <Text text="Failed to load application data. Please check the console or contact support." />
+    </VBox>
+</core:FragmentDefinition>

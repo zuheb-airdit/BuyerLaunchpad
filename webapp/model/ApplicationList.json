@@ -1,0 +1,136 @@
+[
+  {
+    "APP_ICON": "sap-icon://settings",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Admin",
+    "APP_TYPE": "GRP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "1",
+        "S_APP_ICON": "sap-icon://group",
+        "S_APP_TEXT": "Supplier Management Users",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comusermasteraispusermasteraisp-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "admin-1"
+      },
+      {
+        "ID": "2",
+        "S_APP_ICON": "sap-icon://org-chart",
+        "S_APP_TEXT": "Approval Hierarchy Matrix",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comapprovalmatrixapprovalmatrixaisp-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "admin-2"
+      },
+      {
+        "ID": "3",
+        "S_APP_ICON": "sap-icon://settings",
+        "S_APP_TEXT": "Supplier Management Configuration",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comsconfigsystemconfiguration2aisp-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "admin-3"
+      },
+      {
+        "ID": "4",
+        "S_APP_ICON": "sap-icon://business-objects-experience",
+        "S_APP_TEXT": "Request Reports",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comreqreportsaispreqreportsaisp-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "admin-4"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://process",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Invitation LifeCycle Management",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "5",
+        "S_APP_ICON": "sap-icon://process",
+        "S_APP_TEXT": "Invitation LifeCycle Management",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comrequestmanagementrequestmanagement-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "app-5"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://decision",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Invitation Approval",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "6",
+        "S_APP_ICON": "sap-icon://decision",
+        "S_APP_TEXT": "Invitation Approval",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comrequestapprovalrequestprocess-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "app-6"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://add-employee",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Registration Approval",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "7",
+        "S_APP_ICON": "sap-icon://add-employee",
+        "S_APP_TEXT": "Registration Approval",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b558fa12-9db7-46d3-979f-5c6f68869ddc.aisp_vp_airdit.comregistrationregistrationapprovalaisp-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "app-7"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://windows-doors",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Service Entry Sheet",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "16",
+        "S_APP_ICON": "sap-icon://sys-enter",
+        "S_APP_TEXT": "SES Approval",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/a891dc0e-7582-4e3e-bb68-f78226ad2966.AISP_SES_CREATION.cominvoiceappairditinvoiceapprovalairditaispcustomerportal-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-9"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://document",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Supplier Invoice Management",
+    "APP_TYPE": "GRP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "9",
+        "S_APP_ICON": "sap-icon://task",
+        "S_APP_TEXT": "Invoice Approval (Without OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b3c5de90-f797-4e60-b400-7365b9314da5.aisp_vim_airdit.cominvoiceappairditinvoiceapprovalairdit-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-2"
+      },
+      {
+        "ID": "11",
+        "S_APP_ICON": "sap-icon://qr-code",
+        "S_APP_TEXT": "CODER (Non PO - OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/e5b286d9-7e00-496a-ad36-aead720727b5.vimnpo.comnonpovimnonpo-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-4"
+      },
+      {
+        "ID": "12",
+        "S_APP_ICON": "sap-icon://approvals",
+        "S_APP_TEXT": "Invoice Approval (NonPO - OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/e5b286d9-7e00-496a-ad36-aead720727b5.vimnpo.cominvoiceappviminvoiceapprover-0.0.1/index.html#",
+        "TO_MAPPINFO_ID": "inv-5"
+      },
+     
+      {
+        "ID": "14",
+        "S_APP_ICON": "sap-icon://workflow-tasks",
+        "S_APP_TEXT": "SES – VIM Approval",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/11bf5df7-bae3-462b-8d2a-040726dfb0af.AISP_VIM_SES.comsesapprovalvimsesapproval-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-7"
+      }
+    ]
+  }
+ 
+]

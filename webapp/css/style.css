@@ -1,0 +1,28 @@
+/* Enter your custom styles here */
+.customTitle {
+    margin-left: 10rem;
+    margin-inline-start: 10rem;
+    /* Margin at the start */
+    letter-spacing: 1px;
+    /* Spacing between text characters */
+    padding: 5px 0;
+    /* Vertical padding for better spacing */
+}
+
+.subAppItem {
+    margin-left: 2rem !important;
+    /* or padding-left */
+}
+
+.mainTitle{
+    margin-right: 11rem !important;
+}
+
+.noScrollbar {
+    overflow: hidden !important;
+}
+
+.sapMPageEnableScrolling sapUiScrollDelegate{
+    visibility: hidden;
+}
+
