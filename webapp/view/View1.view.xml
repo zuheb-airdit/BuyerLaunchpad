@@ -6,7 +6,6 @@
     xmlns:tnt="sap.tnt"
     xmlns:l="sap.ui.layout"
 >
-
     <tnt:ToolPage id="toolPage">
         <tnt:header>
             <tnt:ToolHeader>
@@ -28,30 +27,31 @@
                     height="2rem"
                     class="sapUiTinyMarginEnd"
                 />
-              
+
                 <ToolbarSpacer />
-                  <Title
+                <Title
                     text="Airdit Intelligence Supplier Portal"
                     titleStyle="H6"
-                    textAlign="Begin"
+                    textAlign="Center"
                     class="mainTitle"
                 />
-                <SearchField
+                <!-- <SearchField
                     id="searchField"
                     placeholder="Search..."
                     width="15rem"
                     search="onSearch"
                     class="sapUiTinyMarginEnd"
-                />
+                /> -->
+                <!-- <Image src="./Images/chat-bot.png" width='30px' height='30px' press="openChatbot" tooltip="Chat with AI" class="sapUiTinyMarginEnd"/> -->
                 <Button
                     id="copilotButton"
-                    icon="sap-icon://action-settings"
+                    icon="../Images/airbot.png"
                     type="Transparent"
                     press="onCopilotPress"
                     tooltip="Settings"
-                    class="sapUiTinyMarginEnd"
+                    class="sapUiTinyMarginEnd sapUiTinyMarginTop"
                 />
-                  <Button
+                <Button
                     id="navBtn"
                     icon="sap-icon://bell"
                     type="Transparent"
@@ -88,7 +88,310 @@
                 id="pageContainer"
                 navigationFinished="onPageNavigationFinished"
                 class="sapUiNoScrollbar"
-            />
+            >
+                <pages>
+                    <Page
+                        id="splitAppPage"
+                        title="Split Application"
+                        showNavButton="true"
+                        navButtonPress="toggleToPreviousPage"
+                        showHeader="false"
+                    >
+                        <content>
+                            <SplitApp id="splitApp">
+                                <masterPages>
+                                    <Page
+                                        id="masterPage"
+                                        title="Suppliers"
+                                        showHeader="false"
+                                        showFooter="false"
+                                        class="masterBackground"
+                                    >
+                                        <headerContent>
+                                            <Button
+                                                icon="sap-icon://menu2"
+                                                press=".onToggleSideNavigation"
+                                                class="menuButton"
+                                            />
+                                        </headerContent>
+                                        <content>
+                                            <HBox justifyContent="SpaceBetween">
+                                                <Text
+                                                    text="Chats"
+                                                    class="titleText sapUiSmallMarginBegin sapUiSmallMarginTop"
+                                                />
+                                                <Button
+                                                    icon="../Images/close.png"
+                                                    press=".onButtonPress"
+                                                    class="sapUiSmallMarginEnd sapUiTinyMarginTop"
+                                                    type="Transparent"
+                                                />
+                                            </HBox>
+                                            <HBox class="horizontalLine" />
+                                            <VBox class="searchContainer">
+                                                <HBox
+                                                    class="searchBarContainer"
+                                                >
+                                                    <SearchField
+                                                        id="searchField"
+                                                        placeholder="Search"
+                                                        width="93%"
+                                                        liveChange=".onSearch"
+                                                        class="sapUiSmallMarginBegin"
+                                                    />
+                                                    <Button
+                                                        icon="sap-icon://microphone"
+                                                        press=".onVoiceSearch"
+                                                        type="Default"
+                                                        class="sapUiTinyNegativeMarginBegin"
+                                                    />
+                                                </HBox>
+                                                <HBox
+                                                    class="airbotIconContainer"
+                                                >
+                                                    <Image
+                                                        src="../Images/airbot.png"
+                                                        class="sapUiSmallMarginBegin sapUiTinyMarginTop"
+                                                        width="2.2rem"
+                                                    />
+                                                    <Text
+                                                        text="AIRBOT"
+                                                        class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+                                                    />
+                                                </HBox>
+                                            </VBox>
+                                            <HBox class="horizontalLine" />
+                                            <VBox class="chatPanelsContainer">
+                                                <Panel
+                                                    expandable="true"
+                                                    expanded="true"
+                                                    headerText="Pinned"
+                                                    width="100%"
+                                                    class="masterBackground sapUiNoMargin sapUiNoContentPadding smallHeaderPanel"
+                                                >
+                                                    <content>
+                                                        <List
+                                                            items="{suppName>/pinnedChats}"
+                                                            class="masterBackground smallFontList"
+                                                            width="98%"
+                                                        >
+                                                            <StandardListItem
+                                                                title="{suppName>name}"
+                                                                description="{suppName>message}"
+                                                                icon="../Images/right.png"
+                                                                type="Navigation"
+                                                                class="masterBackground"
+                                                            >
+                                                                <!-- <ListItemAction
+                                                                    text="Add to Cart"
+                                                                    icon="sap-icon://cart"
+                                                                />
+                                                                <ListItemAction
+                                                                    text="Bookmark"
+                                                                    icon="sap-icon://bookmark"
+                                                                />
+                                                                <ListItemAction
+                                                                    type="Edit"
+                                                                />
+                                                                <ListItemAction
+                                                                    type="Delete"
+                                                                /> -->
+                                                            </StandardListItem>
+                                                        </List>
+                                                    </content>
+                                                </Panel>
+                                                <Panel
+                                                    expandable="true"
+                                                    headerText="Recent"
+                                                    expanded="true"
+                                                    width="100%"
+                                                    class="masterBackground sapUiNoMargin sapUiNoContentPadding smallHeaderPanel"
+                                                >
+                                                    <content>
+                                                        <List
+                                                            items="{suppName>/recentChats}"
+                                                            class="masterBackground smallFontList"
+                                                            width="98%"
+                                                        >
+                                                            <StandardListItem
+                                                                title="{suppName>name}"
+                                                                description="{suppName>message}"
+                                                                icon="../Images/right.png"
+                                                                type="Navigation"
+                                                                class="masterBackground"
+                                                            >
+                                                                <!-- <ListItemAction
+                                                                    text="Add to Cart"
+                                                                    icon="sap-icon://cart"
+                                                                />
+                                                                <ListItemAction
+                                                                    text="Bookmark"
+                                                                    icon="sap-icon://bookmark"
+                                                                />
+                                                                <ListItemAction
+                                                                    type="Edit"
+                                                                />
+                                                                <ListItemAction
+                                                                    type="Delete"
+                                                                /> -->
+                                                            </StandardListItem>
+                                                        </List>
+                                                    </content>
+                                                </Panel>
+                                            </VBox>
+                                        </content>
+                                    </Page>
+                                </masterPages>
+                                <detailPages>
+                                    <Page
+                                        id="detailPage"
+                                        title="Detail"
+                                        showHeader="false"
+                                        floatingFooter="true"
+                                        class="masterBackground1"
+                                    >
+                                        <content>
+                                            <ScrollContainer
+                                                vertical="true"
+                                                id="chatContainer"
+                                                horizontal="false"
+                                                focusable="false"
+                                                class="chatContainer masterBackground1"
+                                            >
+                                                <HBox
+                                                    justifyContent="SpaceBetween"
+                                                >
+                                                    <Text text="" />
+                                                    <HBox
+                                                        class="idBorder sapUiNoContentPadding"
+                                                    >
+                                                        <Text
+                                                            text="Switch to:"
+                                                            class="sapUiTinyMarginTop sapUiTinyMarginBeginEnd"
+                                                            wrapping="false"
+                                                        />
+                                                        <Select
+                                                            id="switchDropdown"
+                                                            change="onSwitchChange"
+                                                            class="noBorderSelect"
+                                                        >
+                                                            <items>
+                                                                <core:Item
+                                                                    key="nestle"
+                                                                    text="Nestle"
+                                                                />
+                                                            </items>
+                                                        </Select>
+                                                    </HBox>
+                                                </HBox>
+                                                <VBox
+                                                    justifyContent="Center"
+                                                    height="100%"
+                                                >
+                                                    <VBox
+                                                        justifyContent="Center"
+                                                        alignItems="Center"
+                                                        class="sapUiSmallMarginTop"
+                                                    >
+                                                        <Image
+                                                            src="../Images/airbot.png"
+                                                            width="5rem"
+                                                            class="imageClass"
+                                                        />
+                                                        <Text
+                                                            text="AIRBOT powered by AIRDIT Software Services"
+                                                            class="smallFont"
+                                                        />
+                                                        <Text
+                                                            text="&quot;Good morning, how can I assist you today?&quot;"
+                                                            class="boldText"
+                                                        />
+                                                        <HBox
+                                                            justifyContent="Center"
+                                                            class="sapUiTinyMarginTopBottom"
+                                                        >
+                                                            <Button
+                                                                text="Start new RFQ"
+                                                                icon="sap-icon://create"
+                                                                press="onStartRFQPress"
+                                                                class="customButton"
+                                                            />
+                                                            <Button
+                                                                text="Review my RFQ's"
+                                                                icon="sap-icon://document"
+                                                                press="onReviewRFQPress"
+                                                                class="customButton"
+                                                            />
+                                                            <Button
+                                                                text="Manage Suppliers"
+                                                                icon="sap-icon://group"
+                                                                press="onManageSuppliersPress"
+                                                                class="customButton"
+                                                            />
+                                                            <Button
+                                                                text="Review Quotation"
+                                                                icon="sap-icon://sales-order"
+                                                                press="onReviewQuotationPress"
+                                                                class="customButton"
+                                                            />
+                                                        </HBox>
+                                                    </VBox>
+                                                </VBox>
+                                                <VBox
+                                                    id="chatList"
+                                                    class="chatList"
+                                                />
+                                            </ScrollContainer>
+                                            <!-- <VBox
+                                                    height="15%"
+                                                    width="100%"
+                                                >
+                                                    <VBox width="100%">
+                                                        <Input class="floatingInput"/>
+                                                    </VBox>
+                                                </VBox> -->
+                                        </content>
+                                        <footer>
+                                            <Bar>
+                                                <contentMiddle>
+                                                    <Button
+                                                        icon="sap-icon://add"
+                                                        press="onAddPress"
+                                                        class="toolbarButton"
+                                                    />
+                                                    <Input
+                                                        id="messageInput"
+                                                        placeholder="Message"
+                                                        liveChange="onInputChange"
+                                                        class="toolbarInput"
+                                                        width="100%"
+                                                    />
+                                                    <Button
+                                                        id="sendButton"
+                                                        icon="../Images/submit.png"
+                                                        press="onSendPress"
+                                                        type="Transparent"
+                                                        class="toolbarButton sendButton"
+                                                        visible="false"
+                                                    />
+                                                    <Button
+                                                        id="stopButton"
+                                                        icon="sap-icon://stop"
+                                                        press="onStopPress"
+                                                        type="Transparent"
+                                                        class="toolbarButton stopButton"
+                                                        visible="false"
+                                                    />
+                                                </contentMiddle>
+                                            </Bar>
+                                        </footer>
+                                    </Page>
+                                </detailPages>
+                            </SplitApp>
+                        </content>
+                    </Page>
+                </pages>
+            </NavContainer>
         </tnt:mainContents>
     </tnt:ToolPage>
 </mvc:View>

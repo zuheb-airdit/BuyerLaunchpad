@@ -19,6 +19,10 @@
       "applicationList": {
         "uri": "model/ApplicationList.json",
         "type": "JSON"
+      },
+      "globalModel": {
+        "uri": "model/GlobalModel.json",
+        "type": "JSON"
       }
     }
   },
@@ -58,11 +62,14 @@
           "bundleName": "aisplaunpad007.i18n.i18n"
         }
       },
-      "applicationList":{
+      "applicationList": {
         "dataSource": "applicationList",
         "type": "sap.ui.model.json.JSONModel"
-
-    }
+      },
+      "GlobalModel": {
+        "dataSource": "globalModel",
+        "type": "sap.ui.model.json.JSONModel"
+      }
     },
     "resources": {
       "css": [
@@ -87,9 +94,7 @@
         {
           "name": "RouteView1",
           "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
+          "target": ["TargetView1"]
         }
       ],
       "targets": {

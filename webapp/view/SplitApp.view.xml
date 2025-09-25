@@ -1,0 +1,52 @@
+<mvc:View
+    controllerName="aisplaunpad007.controller.SplitApp"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    height="100%"
+>
+    <!-- <Page
+        id="splitAppPage"
+        title="Split Application"
+        showNavButton="true"
+        navButtonPress="onNavBack"
+    >
+        <content>
+            <SplitApp id="splitApp">
+                <masterPages>
+                    <Page
+                        id="masterPage"
+                        title="Master List"
+                    >
+                        <List
+                            id="masterList"
+                            items="{/items}"
+                            mode="SingleSelectMaster"
+                            selectionChange="onItemSelect"
+                        >
+                            <items>
+                                <StandardListItem
+                                    title="{text}"
+                                    type="Navigation"
+                                    press="onItemSelect"
+                                />
+                            </items>
+                        </List>
+                    </Page>
+                </masterPages>
+                <detailPages>
+                    <Page
+                        id="detailPage"
+                        title="Detail"
+                    >
+                        <ObjectHeader
+                            title="{/selectedItem/text}"
+                            intro="Details for selected item"
+                        />
+                        <Text text="This is the detail page for {text}. Customize this page as needed." />
+                    </Page>
+                </detailPages>
+            </SplitApp>
+        </content>
+    </Page> -->
+</mvc:View>

@@ -81,11 +81,33 @@
     ]
   },
   {
+    "APP_ICON": "sap-icon://shipping-status",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "ASN Creation",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "17",
+        "S_APP_ICON": "sap-icon://shipping-status",
+        "S_APP_TEXT": "ASN Creation",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/711ab8a5-fd39-4e0e-b2c3-8f9f2da5a8dd.aisp_po_airdit1.comaispasnaispasnairdit-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "asn-1"
+      }
+    ]
+  },
+  {
     "APP_ICON": "sap-icon://windows-doors",
     "APP_ROLE": "Admin",
     "APP_TEXT": "Service Entry Sheet",
-    "APP_TYPE": "APP",
+    "APP_TYPE": "GRP",
     "TO_SUBAPPINFO": [
+      {
+        "ID": "15",
+        "S_APP_ICON": "sap-icon://create",
+        "S_APP_TEXT": "SES Creation",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/a891dc0e-7582-4e3e-bb68-f78226ad2966.AISP_SES_CREATION.comaispaispsupplierportal-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-8"
+      },
       {
         "ID": "16",
         "S_APP_ICON": "sap-icon://sys-enter",
@@ -96,17 +118,46 @@
     ]
   },
   {
+    "APP_ICON": "sap-icon://purchase-order",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "PO Confirmation",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "18",
+        "S_APP_ICON": "sap-icon://verified",
+        "S_APP_TEXT": "PO Confirmation",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/711ab8a5-fd39-4e0e-b2c3-8f9f2da5a8dd.aisp_po_airdit1.comaisppoaisppoairdit1-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "po-1"
+      }
+    ]
+  },
+  {
     "APP_ICON": "sap-icon://document",
     "APP_ROLE": "Admin",
     "APP_TEXT": "Supplier Invoice Management",
     "APP_TYPE": "GRP",
     "TO_SUBAPPINFO": [
       {
+        "ID": "8",
+        "S_APP_ICON": "sap-icon://create-form",
+        "S_APP_TEXT": "Invoice Creation (Without OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b3c5de90-f797-4e60-b400-7365b9314da5.aisp_vim_airdit.cominvoicecreationairditinvoicecreationairdit-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-1"
+      },
+      {
         "ID": "9",
         "S_APP_ICON": "sap-icon://task",
         "S_APP_TEXT": "Invoice Approval (Without OCR)",
         "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/b3c5de90-f797-4e60-b400-7365b9314da5.aisp_vim_airdit.cominvoiceappairditinvoiceapprovalairdit-0.0.1/index.html",
         "TO_MAPPINFO_ID": "inv-2"
+      },
+      {
+        "ID": "10",
+        "S_APP_ICON": "sap-icon://document-text",
+        "S_APP_TEXT": "Invoice Creation (NonPO - OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/e5b286d9-7e00-496a-ad36-aead720727b5.vimnpo.comvimvimnspo-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-3"
       },
       {
         "ID": "11",
@@ -122,7 +173,13 @@
         "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/e5b286d9-7e00-496a-ad36-aead720727b5.vimnpo.cominvoiceappviminvoiceapprover-0.0.1/index.html#",
         "TO_MAPPINFO_ID": "inv-5"
       },
-     
+      {
+        "ID": "13",
+        "S_APP_ICON": "sap-icon://add-document",
+        "S_APP_TEXT": "Create Invoice - SES",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/11bf5df7-bae3-462b-8d2a-040726dfb0af.AISP_VIM_SES.comvimsesvimses-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-6"
+      },
       {
         "ID": "14",
         "S_APP_ICON": "sap-icon://workflow-tasks",
@@ -131,6 +188,140 @@
         "TO_MAPPINFO_ID": "inv-7"
       }
     ]
+  },
+  {
+    "APP_ICON": "sap-icon://monitor-payments",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Invoice Monitoring",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "19",
+        "S_APP_ICON": "sap-icon://monitor-payments",
+        "S_APP_TEXT": "Invoice Monitoring",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/152cae5e-4750-4bd1-9ec8-f87cfb0b9400.InvoiceMonitoring.cominvoicepaymentmonitoringinvoicepaymentmonitoring-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://citizen-connect",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Supplier Communication Configuration ",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "20",
+        "S_APP_ICON": "sap-icon://citizen-connect",
+        "S_APP_TEXT": "Supplier Communication Configuration ",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/7645c92b-2172-49a9-923b-637e6b355ada.suppConfigComm.project1-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://fax-machine",
+    "APP_ROLE": "Admin",
+    "APP_TEXT": "Buyer Mail Configuration",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "21",
+        "S_APP_ICON": "sap-icon://fax-machine",
+        "S_APP_TEXT": "Buyer Mail Configuration",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/e9e347a4-6f4c-41df-b40a-748d7d4b5306.BuyerConfig.buyerconfig-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://monitor-payments",
+    "APP_ROLE": "Supplier",
+    "APP_TEXT": "RFQ Quotation",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "22",
+        "S_APP_ICON": "sap-icon://monitor-payments",
+        "S_APP_TEXT": "RFQ Quotation",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/4b4f830f-e650-4a86-9144-25b2af22a327.AISP_RFQ.comaisprfq-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://compare",
+    "APP_ROLE": "Buyer",
+    "APP_TEXT": "Price Comparision & Quotation Creation",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "23",
+        "S_APP_ICON": "sap-icon://compare",
+        "S_APP_TEXT": "Price Comparision & Quotation Creation",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/363d9889-1b63-4447-be56-e7d72abe5767.AISP_COMPARISION.compricecomparepricecomparision-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://ai",
+    "APP_ROLE": "Supplier",
+    "APP_TEXT": "Invoice Creation(OCR)",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "24",
+        "S_APP_ICON": "sap-icon://ai",
+        "S_APP_TEXT": "Invoice Creation(OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/88fe37af-ce69-42a5-b7f0-1b68ca3cb8cd.PO_VIM_WITH_OCR_SUPPLIER.compovimwithocrsupplierpovimwithocrsupplierside-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://bbyd-active-sales",
+    "APP_ROLE": "Buyer",
+    "APP_TEXT": "Invoice Approval - CODER(OCR)",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "25",
+        "S_APP_ICON": "sap-icon://bbyd-active-sales",
+        "S_APP_TEXT": "Invoice Approval - CODER(OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/974950f8-d1e7-4184-ae7b-63b2d5ab78e8.invoice_vim_ocr.cominvoiceapproveinvoiceapprovecoder-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+  {
+    "APP_ICON": "sap-icon://approvals",
+    "APP_ROLE": "Supplier",
+    "APP_TEXT": "Invoice Approval(OCR",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "26",
+        "S_APP_ICON": "sap-icon://approvals",
+        "S_APP_TEXT": "Invoice Approval(OCR)",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/531779f2-6f63-4bf3-8544-9b0a074e80fe.PO_VIM_WITH_OCR_BUYER.compovimwithocrbuyerpovimwithocrbuyer-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
+  },
+    {
+    "APP_ICON": "sap-icon://customer-view",
+    "APP_ROLE": "Supplier",
+    "APP_TEXT": "Third Party Integrations",
+    "APP_TYPE": "APP",
+    "TO_SUBAPPINFO": [
+      {
+        "ID": "27",
+        "S_APP_ICON": "sap-icon://customer-view",
+        "S_APP_TEXT": "Third Party Integrations",
+        "S_APP_URL": "https://airdit-19092023-jb69io75.launchpad.cfapps.ap10.hana.ondemand.com/7274d07b-49c2-474a-9ea4-f535513e40b1.tp_integration.comtpintegrationsthirdpartyintegration-0.0.1/index.html",
+        "TO_MAPPINFO_ID": "inv-monitor-1"
+      }
+    ]
   }
- 
 ]
